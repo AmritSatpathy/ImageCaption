@@ -43,7 +43,9 @@ def generate_desc(model, tokenizer, photo, max_length):
     # iterate over the whole length of the sequence
     for i in range(max_length):
         # integer encode input sequence
+        print(in_text)
         sequence = tokenizer.texts_to_sequences([in_text])[0]
+        print(sequence)
         # pad input
         sequence = pad_sequences([sequence], maxlen=max_length)
         # predict next word

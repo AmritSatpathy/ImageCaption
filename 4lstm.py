@@ -171,7 +171,7 @@ max_length = max_length(train_descriptions)
 print('Description Length: %d' % max_length)
 
 # define the model
-model = define_model(vocab_size, max_length)
+"""model = define_model(vocab_size, max_length)
 # train the model, run epochs manually and save after each epoch
 epochs = 1
 steps = len(train_descriptions)
@@ -181,4 +181,4 @@ for i in range(epochs):
     # fit for one epoch
     model.fit_generator(generator, epochs=1, steps_per_epoch=steps, verbose=1)
     # save model
-    model.save('lstmmodel_' + str(i) + '.h5')
+    model.save('lstmmodel_' + str(i) + '.h5')"""

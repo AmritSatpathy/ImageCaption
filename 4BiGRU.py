@@ -151,7 +151,7 @@ def data_generator(descriptions, photos, tokenizer, max_length, vocab_size):
             yield [[in_img, in_seq], out_word]
 
 
-# load training dataset (6K)
+# load training dataset
 filename = 'Flickr8k_text/Flickr_8k.trainImages.txt'
 train = load_set(filename)
 print('Dataset: %d' % len(train))
@@ -181,3 +181,4 @@ for i in range(epochs):
     model.fit_generator(generator, epochs=1, steps_per_epoch=steps, verbose=1)
     # save model
     model.save('biGRUmodel_' + str(i) + '.h5')
+

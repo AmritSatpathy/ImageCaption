@@ -58,7 +58,7 @@ def to_vocabulary(descriptions):
     # build a list of all description strings
     all_desc = set()
     for key in descriptions.keys():
-        [all_desc.update(d.split()) for d in descriptions[key]]
+        [all_desc.update(d.split()) for d in descriptions[key]]#add to the vocabulary
     return all_desc
 
 
